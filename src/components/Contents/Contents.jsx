@@ -22,7 +22,7 @@ const skills = [
       },
       {
         key: 'JS FRAMEWORK',
-        value: ['React, Redux, Vue, jQuery'],
+        value: ['ReactJS, Redux, VueJS, jQuery'],
       },
       {
         key: 'CSS FRAMEWORK',
@@ -128,26 +128,31 @@ const projects = [
     imgsrc: dataStartupterrace,
     title: '林口數據平台',
     href: 'https://data.startupterrace.tw/?page=1',
+    tags: ['ReactJS', 'React-router', 'Material-UI', 'Gitlab', 'NGINX', 'Adobe XD', 'Zeplin'],
   },
   {
     imgsrc: liontravelActivity,
     title: '雄獅旅遊網 - 票券當地遊',
     href: 'https://activity.liontravel.com/category/zh-tw/index',
+    tags: ['jQuery', 'EJS', 'ReactJS', 'Webpack', 'GitKraken'],
   },
   {
     imgsrc: bookingSystem,
     title: '餐廳訂位系統',
     href: 'https://bookingsystemclient.herokuapp.com/',
+    tags: ['ReactJS', 'React-router', 'Material-UI', 'Nodejs', 'express', 'MongoDB', 'Azure App Services', 'heroku'],
   },
   {
     imgsrc: botDesigner,
     title: 'Bot Designer',
     href: 'https://youtu.be/ktGWSHyvY5c',
+    tags: ['jQuery', 'Bootstrap', 'SASS', 'SweetAlert', 'Figma', 'VSTS'],
   },
   {
     imgsrc: linebot,
     title: 'Line Bot 客服機器人 @smm1422h',
     href: '/#',
+    tags: ['C#', 'Language Understanding (LUIS)', 'Line developers'],
   },
 ]
 
@@ -157,9 +162,19 @@ export default function Contents() {
   return (
     <section className="contents">
       <p className="aboutme">
-        喜歡使用官方文件搭配網路文章的方法，不斷進行嘗試直到將問題解決。
+        我畢業於中華大學餐旅管理學系,
         <br />
-        這將使我擁有無比的成就感，同時將新吸收的知識與身邊的人分享。
+        在高中時有稍微接觸過程式語言 (Visual Basic 6.0), 那是我第一次接觸程式, 並萌生了對它的興趣 !
+        <br />
+        <br />
+        大四下學期注意到 Build School 跨域黑客軟體開發培訓, 我決定參加課程, 將程式作為第二專長。
+        <br />
+        在培訓的尾聲, 我參加了企業專題製作, 與夥伴協同開發 Bot Designer 專案, 也順利找到了第一份工作。
+        <br />
+        <br />
+        透過寫程式讓我發現, 自己對於未知的事物充滿好奇心與想像; 面對問題有努力不懈的精神 !
+        <br />
+        Happy Coding !
       </p>
       <div className="skills">
         <p className="title">Skills</p>
@@ -225,10 +240,17 @@ export default function Contents() {
       <div className="projects">
         <div className="projectItems">
           {projects.map((project, idx) => (
-            <a className="item" href={project.href} title={project.title} key={idx}>
-              <span className="projectName">{project.title}</span>
-              <img src={project.imgsrc} alt={project.title} />
-            </a>
+            <div className="itemDiv">
+              <a className="item" href={project.href} title={project.title} key={idx} target="__blank">
+                <span className="projectName">{project.title}</span>
+                <img src={project.imgsrc} alt={project.title} />
+              </a>
+              <div className="tags">
+                {project.tags.map((tag) => (
+                  <span className="tag">{tag}</span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
