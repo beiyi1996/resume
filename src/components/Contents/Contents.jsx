@@ -5,7 +5,7 @@ import liontravel from '../../images/liontravel.png'
 import pyramius from '../../images/pyramius.jpeg'
 import dataStartupterrace from '../../images/data_startupterrace.png'
 import liontravelActivity from '../../images/liontravel_activity.jpg'
-import bookingSystem from '../../images/bookig_system.jpg'
+import bookingSystem from '../../images/bookig_system.png'
 import botDesigner from '../../images/bot_designer.jpg'
 import linebot from '../../images/linebot.png'
 import './contents.scss'
@@ -240,14 +240,16 @@ export default function Contents() {
       <div className="projects">
         <div className="projectItems">
           {projects.map((project, idx) => (
-            <div className="itemDiv">
-              <a className="item" href={project.href} title={project.title} key={idx} target="__blank">
+            <div className="itemDiv" key={idx}>
+              <a className="item" href={project.href} title={project.title} target="__blank">
                 <span className="projectName">{project.title}</span>
                 <img src={project.imgsrc} alt={project.title} />
               </a>
               <div className="tags">
-                {project.tags.map((tag) => (
-                  <span className="tag">{tag}</span>
+                {project.tags.map((tag, idx) => (
+                  <span className="tag" key={idx}>
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>
