@@ -10,12 +10,90 @@ import botDesigner from '../../images/bot_designer.jpg'
 import linebot from '../../images/linebot.png'
 import './contents.scss'
 
+const skillTabs = ['Front-end', 'Dev Tools', 'UI / UX', 'Back-end']
+
+const skills = [
+  {
+    category: 'Front-end',
+    panel: [
+      {
+        key: 'BASIC',
+        value: ['HTML5, CSS, JavaScript, RWD'],
+      },
+      {
+        key: 'JS FRAMEWORK',
+        value: ['React, Redux, Vue, jQuery'],
+      },
+      {
+        key: 'CSS FRAMEWORK',
+        value: ['Sass, Material-UI, Bootstrap, JSS'],
+      },
+    ],
+  },
+  {
+    category: 'Dev Tools',
+    panel: [
+      {
+        key: 'Npm',
+        value: [],
+      },
+      {
+        key: 'Webpack',
+        value: [],
+      },
+      {
+        key: 'Eslint',
+        value: [],
+      },
+      {
+        key: 'git',
+        value: [],
+      },
+      {
+        key: 'Storybook',
+        value: [],
+      },
+    ],
+  },
+  {
+    category: 'UI / UX',
+    panel: [
+      {
+        key: 'Adobe',
+        value: [],
+      },
+      {
+        key: 'Zeplin',
+        value: [],
+      },
+      {
+        key: 'Figma',
+        value: [],
+      },
+    ],
+  },
+  {
+    category: 'Back-end',
+    panel: [
+      {
+        key: 'Nodejs',
+        value: [],
+      },
+      {
+        key: 'MongoDB',
+        value: [],
+      },
+    ],
+  },
+]
+
 const workexperiences = [
   {
     period: 'Mar 2020 - Mar 2021',
     imgsrc: essences,
     position: '前端工程師',
     companyName: '易勝資訊股份有限公司',
+    description: '委外事業處, 駐點於 資訊工業策進會',
     duty: [
       '負責網站需求分析',
       '程式設計與撰寫',
@@ -32,6 +110,7 @@ const workexperiences = [
     imgsrc: liontravel,
     position: '前端工程師',
     companyName: '雄獅資訊股份有限公司',
+    description: '',
     duty: ['負責票券館別搜尋面板維護與優化', '與後端和 PM 討論需求內容及實作細節', '支援 F2E 共通組'],
   },
   {
@@ -39,6 +118,7 @@ const workexperiences = [
     imgsrc: pyramius,
     position: '前端工程師（實習生）',
     companyName: '沛米科技股份有限公司',
+    description: '',
     duty: ['負責對話流程UI刻板', '操作互動行為'],
   },
 ]
@@ -72,7 +152,7 @@ const projects = [
 ]
 
 export default function Contents() {
-  const [selectedSkills, setSelectedSkills] = useState('frontend')
+  const [selectedSkills, setSelectedSkills] = useState('Front-end')
 
   return (
     <section className="contents">
@@ -86,64 +166,30 @@ export default function Contents() {
         <div className="tabPanels">
           <div className="tabs">
             <ul>
-              <li
-                className={clsx('tab', { focus: selectedSkills === 'frontend' })}
-                onClick={() => setSelectedSkills('frontend')}
-              >
-                Front-end
-              </li>
-              <li
-                className={clsx('tab', { focus: selectedSkills === 'devTools' })}
-                onClick={() => setSelectedSkills('devTools')}
-              >
-                Dev Tools
-              </li>
-              <li
-                className={clsx('tab', { focus: selectedSkills === 'uiux' })}
-                onClick={() => setSelectedSkills('uiux')}
-              >
-                UI / UX
-              </li>
-              <li
-                className={clsx('tab', { focus: selectedSkills === 'backend' })}
-                onClick={() => setSelectedSkills('backend')}
-              >
-                Back-end
-              </li>
+              {skillTabs.map((skilltab, idx) => (
+                <li
+                  key={idx}
+                  className={clsx('tab', { focus: selectedSkills === skilltab })}
+                  onClick={() => setSelectedSkills(skilltab)}
+                >
+                  {skilltab}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="panels">
-            {selectedSkills === 'frontend' && (
-              <>
-                <p>- BASIC :</p>
-                <span>HTML5, CSS, JavaScript, RWD</span>
-                <p>- JS FRAMEWORK :</p>
-                <span>React, Redux, Vue, jQuery</span>
-                <p>- CSS FRAMEWORK :</p>
-                <span>Sass, Material-UI, Bootstrap, JSS</span>
-              </>
-            )}
-            {selectedSkills === 'devTools' && (
-              <>
-                <p>Npm</p>
-                <p>Webpack</p>
-                <p>Eslint</p>
-                <p>git</p>
-                <p>Storybook</p>
-              </>
-            )}
-            {selectedSkills === 'uiux' && (
-              <>
-                <p>Adobe XD</p>
-                <p>Zeplin</p>
-                <p>Figma</p>
-              </>
-            )}
-            {selectedSkills === 'backend' && (
-              <>
-                <p>Nodejs</p>
-                <p>MongoDB</p>
-              </>
+            {skills.map(
+              (skillpanel, idx) =>
+                selectedSkills === skillpanel.category && (
+                  <div key={idx}>
+                    {skillpanel.panel.map((panel, idx) => (
+                      <div key={idx}>
+                        <p>- {panel.key}</p>
+                        {panel.value.length > 0 && <span>{panel.value}</span>}
+                      </div>
+                    ))}
+                  </div>
+                )
             )}
           </div>
         </div>
@@ -161,6 +207,7 @@ export default function Contents() {
             <div className="duty">
               <h4 className="position">{experience.position}</h4>
               <span className="companyName">{experience.companyName}</span>
+              {!!experience.description && <span className="description">{experience.description}</span>}
               <ol>
                 {experience.duty.map((item, idx) => (
                   <li key={idx}>{item}</li>
