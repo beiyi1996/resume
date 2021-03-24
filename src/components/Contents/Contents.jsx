@@ -151,7 +151,7 @@ const projects = [
   {
     imgsrc: linebot,
     title: 'Line Bot 客服機器人 @smm1422h',
-    href: '/#',
+    href: 'https://page.line.me/smm1422h',
     tags: ['C#', 'Language Understanding (LUIS)', 'Line developers'],
   },
 ]
