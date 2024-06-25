@@ -1,14 +1,14 @@
-import { Banner } from './components/Banner'
-import { Contents } from './components/Contents'
-import './App.css'
+import Banner from "./components/banner";
+import Contents from "./components/contents";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App text-base">
       <Banner />
       <Contents />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
