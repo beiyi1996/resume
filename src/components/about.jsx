@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <div>
       <Title content="About Me" />
-      <p className="pt-10 text-left">
+      <p className="pt-10 text-left dark:text-stone-50">
         我是一位來自台灣的前端工程師，擁有 5 年的專業開發經驗，曾經使用 React
         Native 搭配 Expo 開發 SaaS 後台系統，以及使用 Next.js
         開發預訂網站等經驗。在這些項目中，我負責優化圖片元件的使用方式以提升用戶體驗以及重構方案訂閱模組，並加上測試來保障程式碼品質。重構後的程式碼獲得了同事的一致好評，他們認為程式碼清晰且易於擴充和修改，不用擔心改

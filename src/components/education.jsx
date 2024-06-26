@@ -19,10 +19,10 @@ export default function Education() {
     <div className="mt-10 sm:mt-0">
       <Title content="Education" />
       {schoolingRecords.map(({ name, period, major }) => (
-        <div className="pt-8 text-left">
-          <p>{name}</p>
+        <div className="pt-8 text-left" key={`${name}_${major}`}>
+          <p className="dark:text-orange-400">{name}</p>
           <p className="mb-2 text-gray-400">{period}</p>
-          <p>{major}</p>
+          <p className="dark:text-stone-50">{major}</p>
         </div>
       ))}
     </div>

@@ -6,8 +6,10 @@ import Education from "./education";
 
 export const Title = ({ content }) => (
   <div className="relative">
-    <h1 className="text-left text-xl font-bold">{content}</h1>
-    <div className="absolute -bottom-3 left-0 w-10 border-b-2 border-gray-400"></div>
+    <h1 className="text-left text-xl font-bold dark:text-blue-300">
+      {content}
+    </h1>
+    <div className="absolute -bottom-3 left-0 w-10 border-b-2 border-gray-400 dark:border-blue-300"></div>
   </div>
 );
 

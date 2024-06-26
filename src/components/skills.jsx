@@ -31,10 +31,10 @@ export default function Skills() {
       <div className="flex flex-col">
         {mySkills.map(({ category, panel }, index) => (
           <div key={index} className="mt-10 flex-1 flex-col text-left">
-            <p className="font-bold">{category}</p>
+            <p className="font-bold dark:text-orange-400">{category}</p>
             <ul className="pl-4 pt-4">
               {panel.map((item) => (
-                <li key={item} className="list-disc">
+                <li key={item} className="list-disc dark:text-stone-50">
                   {item}
                 </li>
               ))}

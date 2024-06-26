@@ -113,12 +113,11 @@ export default function Experience() {
         (
           { position, companyName, description, period, duty, project },
           index,
-          array,
         ) => {
           return (
             <div key={index} className="border-b pb-4 pt-8 text-left">
               <div className="text-left font-bold">
-                <p>
+                <p className="dark:text-orange-400">
                   {position}, {companyName}
                   {description ? `- ${description}` : ""}
                 </p>
@@ -126,17 +125,19 @@ export default function Experience() {
               </div>
               <ul className="list-disc pl-4 pt-4">
                 {duty.map(({ title, description }) => (
-                  <li key={title} className="mb-2">
-                    <p>{title}</p>
-                    <span className="text-gray-400">{description}</span>
+                  <li key={title} className="mb-2 dark:text-stone-50">
+                    {title}
+                    <p className="mt-1 text-gray-400 dark:text-stone-300">
+                      {description}
+                    </p>
                   </li>
                 ))}
               </ul>
-              <p className="mt-4">
+              <p className="mt-4 dark:text-stone-300">
                 專案連結：
                 <a
                   href={project?.link}
-                  className="hover:bg-gray-600 hover:text-gray-50"
+                  className="hover:bg-gray-600 hover:text-gray-50 hover:dark:bg-stone-50 hover:dark:text-zinc-600"
                 >
                   {project?.title}
                 </a>
