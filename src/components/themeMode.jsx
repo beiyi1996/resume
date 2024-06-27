@@ -13,6 +13,7 @@ export default function ThemedMode() {
   return (
     <div className="fixed right-3 top-3">
       <button
+        aria-label="modeBtn"
         className="flex h-7 w-7 items-center justify-center rounded-md border border-gray-400 dark:border-stone-50"
         onClick={handleToggle}
       >
