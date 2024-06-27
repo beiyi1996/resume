@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-      node-version: '20.15.0'
+        node-version: '20.15.0'
     
     - name: Install dependencies
       run: npm install
@@ -27,7 +27,7 @@ jobs:
     - name: List files for debugging
       run: ls -la ./build
 
-    - name: Deploy to Github Pages
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with: 
         github_token: ${{secrets.GITHUB_TOKEN}}
