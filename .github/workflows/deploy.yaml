@@ -10,25 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    -name: Checkout repository
-    use: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-    -name: Set up Node.js
-    use: actions/setup-node@v2
-    with:
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
       node-version: '20.15.0'
     
-    -name: Install dependencies
-    run: npm install
+    - name: Install dependencies
+      run: npm install
 
-    -name: Build the project
-    run: npm run build
+    - name: Build the project
+      run: npm run build
 
     - name: List files for debugging
       run: ls -la ./build
 
-    -name: Deploy to Github Pages
-    use: peaceiris/actions-gh-pages@v3
-    with: 
-      github_token: ${{secrets.GITHUB_TOKEN}}
-      publish_dir: ./build
+    - name: Deploy to Github Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with: 
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        publish_dir: ./build
