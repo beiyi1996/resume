@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App text-base dark:bg-zinc-600">
+    <div className="App text-base">
       <ThemedMode />
       <Banner />
       <Contents />
