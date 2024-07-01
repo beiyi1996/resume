@@ -107,7 +107,7 @@ const workExperiences = [
 
 export default function Experience() {
   return (
-    <div>
+    <div className="sm:border-r-none p-10 border-custom">
       <Title content="Work Experience" />
       {workExperiences.map(
         (
@@ -125,7 +125,7 @@ export default function Experience() {
               </div>
               <ul className="list-disc pl-4 pt-4">
                 {duty.map(({ title, description }) => (
-                  <li key={title} className="mb-2 dark:text-stone-50">
+                  <li key={title} className="mb-2">
                     {title}
                     <p className="mt-1 text-gray-400 dark:text-stone-300">
                       {description}
@@ -135,10 +135,7 @@ export default function Experience() {
               </ul>
               <p className="mt-4 dark:text-stone-300">
                 專案連結：
-                <a
-                  href={project?.link}
-                  className="hover:bg-gray-600 hover:text-gray-50 hover:dark:bg-stone-50 hover:dark:text-zinc-600"
-                >
+                <a href={project?.link} className="btn-custom">
                   {project?.title}
                 </a>
               </p>

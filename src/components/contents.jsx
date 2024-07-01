@@ -15,13 +15,13 @@ export const Title = ({ content }) => (
 
 export default function Contents() {
   return (
-    <section className="p-10">
+    <section>
       <AboutMe />
-      <div className="mt-10 flex flex-col sm:flex-row">
-        <div className="flex-[2] sm:mr-10">
+      <div className="flex flex-col sm:flex-row">
+        <div className="flex-[2]">
           <Experience />
         </div>
-        <div className="flex-1">
+        <div className="flex flex-1 flex-col">
           <Education />
           <Skills />
         </div>

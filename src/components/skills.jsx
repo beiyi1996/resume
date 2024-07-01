@@ -26,15 +26,15 @@ const mySkills = [
 
 export default function Skills() {
   return (
-    <div className="mt-10">
+    <div className="border-t-none flex-1 p-10 border-custom">
       <Title content="Skills" />
       <div className="flex flex-col">
         {mySkills.map(({ category, panel }, index) => (
-          <div key={index} className="mt-10 flex-1 flex-col text-left">
+          <div key={index} className="mt-10 flex flex-1 flex-col text-left">
             <p className="font-bold dark:text-orange-400">{category}</p>
             <ul className="pl-4 pt-4">
               {panel.map((item) => (
-                <li key={item} className="list-disc dark:text-stone-50">
+                <li key={item} className="list-disc">
                   {item}
                 </li>
               ))}
