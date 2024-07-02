@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "https://beiyi1996.github.io/resume_github_pages/",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.3",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
     "clsx": "^1.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -38,9 +38,15 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.24.7",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    }
   }
 }
