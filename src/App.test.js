@@ -10,16 +10,17 @@ test("renders my name text", () => {
 });
 
 describe("ThemedMode component", () => {
-  test("toggles dark mode on button click", () => {
+  test("toggles dark mode on button click", async () => {
+    const user = userEvent.setup();
     render(<ThemedMode />);
     expect(screen.queryByText("dark")).toBeNull();
 
-    const modeBtn = screen.getByRole("button", /modeBtn/i);
+    const modeBtn = screen.getByRole("button", { name: /modeBtn/i });
 
-    userEvent.click(modeBtn);
+    await user.click(modeBtn);
     expect(document.documentElement.classList.contains("dark")).toBe(true);
 
-    userEvent.click(modeBtn);
+    await user.click(modeBtn);
     expect(document.documentElement.classList.contains("dark")).toBe(false);
   });
 });
