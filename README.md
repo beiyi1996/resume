@@ -1,31 +1,49 @@
+# resume
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of Contents
+- [Description](#description)
+- [Features](#features)
+- [Installation](#installation)
+- [Deployment](#deployment)
+- [License](#license)
 
-In the project directory, you can run:
+## Description
+This project is a detailed overview of my professional background, including education, work experience, technical skills, and notable projects. Explore my journey and accomplishments in the field of software development.
 
-### `npm start`
+## Features
+- Built using React 18
+- TypeScript support
+- TailwindCSS for styling
+- Jest for testing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+To get a local copy up and running, follow these simple steps.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repo:
+   ```sh
+    git clone https://github.com/beiyi1996/resume.git
+   ```
 
-### `npm test`
+2. Install dependencies:
+   ```sh
+    npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Run the app on localhost:
+   ```sh
+    npm start
+   ```
 
-### `npm run build`
+4. Run the tests in watch mode:
+   ```sh
+    npm test
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
+This project uses GitHub Actions to automatically deploy changes to the `master` branch.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License
+Distributed under the [MIT License](https://opensource.org/license/mit).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### Deployment
-use github action watch master branch to deploy.
