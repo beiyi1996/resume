@@ -33,7 +33,7 @@ export default function Banner() {
       </div>
       <div className="flex flex-1 flex-col items-start justify-start p-5 border-custom border-t-none sm:border-t">
         <h1 className="text-2xl font-bold dark:text-orange-400">
-          黃汶鈞 Winni Huang
+          黃汶鈞 Winni Huang :)
         </h1>
         <h3 className="mt-2 text-lg dark:text-stone-300">前端工程師</h3>
         <div className="mt-3 flex flex-col sm:flex-row">
