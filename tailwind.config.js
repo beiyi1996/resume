@@ -3,7 +3,7 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   darkMode: "selector",
-  content: ["./src/**/*.{html,js,jsx}", "./index.html"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}", "./index.html"],
   theme: {
     fontSize: {
       sm: ["12px", "16px"],
