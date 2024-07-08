@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/resume_github_pages/static/css/main.c49a4a51.css",
-    "main.js": "/resume_github_pages/static/js/main.3f24d1b6.js",
-    "static/media/remove_background_winni.png": "/resume_github_pages/static/media/remove_background_winni.b6a3400db18b379081b7.png",
-    "index.html": "/resume_github_pages/index.html",
-    "static/media/sunIcon.svg": "/resume_github_pages/static/media/sunIcon.c3ed142e2db7f43ad9e3b3b0c627a04f.svg",
-    "static/media/moonIcon.svg": "/resume_github_pages/static/media/moonIcon.f6632530a56c305fabd8298ad137fdb1.svg",
-    "main.c49a4a51.css.map": "/resume_github_pages/static/css/main.c49a4a51.css.map",
-    "main.3f24d1b6.js.map": "/resume_github_pages/static/js/main.3f24d1b6.js.map"
+    "main.css": "/resume/static/css/main.c49a4a51.css",
+    "main.js": "/resume/static/js/main.506370ab.js",
+    "static/media/remove_background_winni.png": "/resume/static/media/remove_background_winni.b6a3400db18b379081b7.png",
+    "index.html": "/resume/index.html",
+    "static/media/sunIcon.svg": "/resume/static/media/sunIcon.c3ed142e2db7f43ad9e3b3b0c627a04f.svg",
+    "static/media/moonIcon.svg": "/resume/static/media/moonIcon.f6632530a56c305fabd8298ad137fdb1.svg",
+    "main.c49a4a51.css.map": "/resume/static/css/main.c49a4a51.css.map",
+    "main.506370ab.js.map": "/resume/static/js/main.506370ab.js.map"
   },
   "entrypoints": [
     "static/css/main.c49a4a51.css",
-    "static/js/main.3f24d1b6.js"
+    "static/js/main.506370ab.js"
   ]
 }
