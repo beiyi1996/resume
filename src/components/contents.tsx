@@ -4,7 +4,7 @@ import Skills from "./skills";
 import Experience from "./experience";
 import Education from "./education";
 
-export const Title = ({ content }) => (
+export const Title: React.FC<{ content: string }> = ({ content }) => (
   <div className="relative">
     <h1 className="text-left text-xl font-bold dark:text-blue-300">
       {content}

@@ -16,7 +16,10 @@ const info = [
   },
 ];
 
-const Link = ({ href, content }) => (
+const Link: React.FC<{ href: string; content: string }> = ({
+  href,
+  content,
+}) => (
   <a href={href} className="text-xs btn-custom">
     {content}
   </a>
@@ -25,10 +28,10 @@ const Link = ({ href, content }) => (
 export default function Banner() {
   return (
     <section className="banner-section sm:flex-row">
-      <div className="sm:border-r-none flex justify-center border-custom sm:flex-[20%] sm:flex-grow-0">
+      <div className="flex justify-center border-custom sm:flex-[20%] sm:flex-grow-0 sm:border-r-none">
         <img className="w-4/6 sm:w-full" src={Winni} alt="Winni Huang" />
       </div>
-      <div className="border-t-none flex flex-1 flex-col items-start justify-start p-5 border-custom sm:border-t">
+      <div className="flex flex-1 flex-col items-start justify-start p-5 border-custom border-t-none sm:border-t">
         <h1 className="text-2xl font-bold dark:text-orange-400">
           黃汶鈞 Winni Huang
         </h1>
