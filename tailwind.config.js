@@ -27,13 +27,17 @@ module.exports = {
         DEFAULT: "#FFFFFF",
         dark: "#52525b",
       },
+      screens: {
+        lg: "992px",
+      },
     },
   },
   plugins: [
     plugin(function ({ addUtilities }) {
       const newUtilities = {
         ".btn-custom": {
-          "@apply border border-gray-600 bg-gray-600 p-1 text-gray-50": {},
+          "@apply border border-gray-600 bg-gray-600 p-1 text-gray-50 text-sm":
+            {},
         },
         ".btn-custom:hover": {
           "@apply bg-transparent text-gray-600": {},
