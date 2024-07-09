@@ -16,7 +16,7 @@ const schoolingRecords = [
 
 export default function Education() {
   return (
-    <div className="border-t-none p-10 border-custom sm:m-0 sm:border-t">
+    <div className="p-10 border-custom border-b-none sm:m-0 sm:border-t">
       <Title content="Education" />
       {schoolingRecords.map(({ name, period, major }) => (
         <div className="pt-8 text-left" key={`${name}_${major}`}>

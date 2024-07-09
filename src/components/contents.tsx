@@ -18,12 +18,12 @@ export default function Contents() {
     <section>
       <AboutMe />
       <div className="flex flex-col sm:flex-row">
-        <div className="flex-[2]">
-          <Experience />
-        </div>
         <div className="flex flex-1 flex-col">
           <Education />
           <Skills />
+        </div>
+        <div className="flex-[2]">
+          <Experience />
         </div>
       </div>
     </section>

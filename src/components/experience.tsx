@@ -107,7 +107,7 @@ const workExperiences = [
 
 export default function Experience() {
   return (
-    <div className="sm:border-r-none p-10 border-custom">
+    <div className="p-10 border-custom sm:border-l-none">
       <Title content="Work Experience" />
       {workExperiences.map(
         (

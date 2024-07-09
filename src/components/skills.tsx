@@ -26,7 +26,7 @@ const mySkills = [
 
 export default function Skills() {
   return (
-    <div className="border-t-none flex-1 p-10 border-custom">
+    <div className="flex-1 p-10 border-custom border-b-none sm:border-b">
       <Title content="Skills" />
       <div className="flex flex-col">
         {mySkills.map(({ category, panel }, index) => (
